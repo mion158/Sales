@@ -1,0 +1,3 @@
+INSERT INTO BRANDS (BRAND_NAME, EMAIL, ADDRESS, CITY, COUNTRY) VALUES ('Laneige', 'lan@neige.com', '123 road road', 'Seoul', 'South Korea')
+INSERT INTO BRANDS (BRAND_NAME, EMAIL, ADDRESS, CITY, COUNTRY) VALUES ('Innisfree', 'innis@free.com', '123 road road', 'Seoul', 'South Korea')
+INSERT INTO BRANDS (BRAND_NAME, EMAIL, ADDRESS, CITY, COUNTRY) VALUES ('Shiseido', 'shisei@do.com', '123 road road', 'Tokyo', 'Japan')
