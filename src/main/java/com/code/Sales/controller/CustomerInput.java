@@ -1,53 +1,24 @@
-package com.code.Sales.entities;
+package com.code.Sales.controller;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.code.Sales.entities.Customer;
 
-@Entity
-@Table(name="CUSTOMERS")
+public class CustomerInput {
+    /**
+     * firstName: String!
+    lastName: String!
+    email: String!
+    phoneNumber: String
+    address: String!
+    city: String!
+    postCode: String!
+     */
 
-public class Customer {
-    /**CUSTOMER_ID BIGINT PRIMARY KEY AUTOINCREMENT,
-    FIRST_NAME VARCHAR(64),
-    LAST_NAME VARCHAR(64),
-    EMAIL VARCHAR(200) UNIQUE,
-    ADDRESS VARCHAR(64),
-    CITY VARCHAR(65),
-    POSTCODE VARCHAR(12) */
-
-    @Id
-    @Column(name="CUSTOMER_ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-
-    @Column(name="FIRST_NAME")
     private String firstName;
-
-    @Column(name="LAST_NAME")
     private String lastName;
-
-    @Column(name="EMAIL")
     private String email;
-
-    @Column(name="ADDRESS")
     private String address;
-
-    @Column(name="CITY")
     private String city;
-
-    @Column(name="POSTCODE")
     private String postCode;
-
-    public long getId () {
-        return id;
-    }
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getFirstName(){
         return firstName;
@@ -91,4 +62,14 @@ public class Customer {
         this.postCode = postCode;
     }
 
+    public Customer getCustomerEntity() {
+        Customer customer = new Customer();
+        customer.setFirstName(this.firstName);
+        customer.setLastName(this.lastName);
+        customer.setEmail(this.email);
+        customer.setAddress(this.address);
+        customer.setCity(this.city);
+        customer.setPostcode(this.postCode);
+        return customer;
+    }
 }
