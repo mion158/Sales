@@ -6,7 +6,6 @@ type Customer {
     phoneNumber: String
     address: String!
     city: String!
-    state: String!
     postCode: String!
 }
 
